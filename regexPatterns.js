@@ -18,7 +18,7 @@ var isValidNumber = /^(\+?\-?)(((\d{1,3})(,\d{3})*)|(\d+))(.\d+)?$/;
 var isValidUSCurrency = /^(\$?)(\d{1,3}(\,\d{3})*|(\d+))(\.\d{2})?$/;
 
 /*
-  Handles percentages from 0-100 with up to 2 decimal places
+  Handles percentages from 0-100 with up to N decimal places and an optional trailing '%'
 */
 var isValidPercentage = /^(0*100{1,1}\.?((?<=\.)0*)?%?$)|(^0*\d{0,2}\.?((?<=\.)\d*)?%?)$/;
 
