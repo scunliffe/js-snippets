@@ -42,3 +42,32 @@ var isValidUSZipCode = /(^(\d{5})$)|(^((\d){5}(\-?)(\d){4})$)/;
 
 var isValidCanadianPostalCode = /^([a-z])(\d)([a-z])([\s\-]?)(\d)([a-z])(\d)$/i;
 
+var isValidMD5Hash = /^([a-z0-9]{32})$/;
+
+/*
+	Find IPv4 IP addresses
+*/
+var isValidIPAddress = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/;
+
+/*
+	Handles US SSN
+*/
+function validateSSN(ssn) {
+	//find area number (1st 3 digits, no longer actually signifies area)
+	var area = parseInt(ssn.substring(0, 3));
+	return (
+		//9 characters
+		ssn.length === 9 &&
+		//no set can start with zero
+		ssn.match(/^[1-9][0-9]{2}[1-9][0-9]{1}[1-9][0-9]{3}/) &&
+		//disallow Satan's minions from becoming residents of the US
+		area !== 666 &&
+		//it's over 900
+		area < 900 &&
+		//fun fact: some idiot boss put his secretary's ssn in wallets
+		//he sold, now it "belongs" to 40000 people
+		ssn !== '078051120' &&
+		//was used in an ad by the Social Security Administration
+		ssn !== '219099999'
+	);
+}
