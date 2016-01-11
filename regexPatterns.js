@@ -71,3 +71,14 @@ function validateSSN(ssn) {
 		ssn !== '219099999'
 	);
 }
+
+/*
+	Handles usernames from 6 to 32 characters in length...
+	starting alpha, remaining can be alpha, numeric, dash or underscore.
+*/
+var isValidUsername = /^([a-z])([a-z0-9\-_]{5,31})$/i;
+
+/*
+	Handles time in the HH:MM or HH:MM:SS formats (with our without colon delimiters)
+*/
+var isValid24HourTime = /^([01]?[0-9]|2[0-3])(:?)[0-5][0-9](((:?)[0-5][0-9])?)$/;
