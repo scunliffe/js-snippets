@@ -82,3 +82,9 @@ var isValidUsername = /^([a-z])([a-z0-9\-_]{5,31})$/i;
 	Handles time in the HH:MM or HH:MM:SS formats (with our without colon delimiters)
 */
 var isValid24HourTime = /^([01]?[0-9]|2[0-3])(:?)[0-5][0-9](((:?)[0-5][0-9])?)$/;
+
+/*
+	Handles expiry date fields typically used on credit card form validations (for acceptable formats)
+	TODO: Expand to ensure valid values are entered e.g. 99 is not a valid month
+*/
+var isValidMonthYearExpiryDate = /^(\d){1,2}([^\d]?)(\d){1,2}$/;
