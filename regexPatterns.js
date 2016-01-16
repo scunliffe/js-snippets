@@ -48,6 +48,8 @@ var isValidCanadianPostalCode = /^([a-z])(\d)([a-z])([\s\-]?)(\d)([a-z])(\d)$/i;
 
 var isValidMD5Hash = /^([a-z0-9]{32})$/;
 
+var isValidPrintableASCIICharacters = /^([ -~]*)$/;//Char code 64-126 (space to tilde)
+
 /*
 	Find IPv4 IP addresses
 */
