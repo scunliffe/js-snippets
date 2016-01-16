@@ -24,6 +24,8 @@ var isValidPercentage = /^(0*100{1,1}\.?((?<=\.)0*)?%?$)|(^0*\d{0,2}\.?((?<=\.)\
 
 var isValidHexColor = /^#?([a-f0-9]{6}|[a-f0-9]{3})$/i;
 
+var isValidHTMLTag = /^<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)$/i;
+
 /*
 	Handles distances in various forms of imperial units
 		3'7"
