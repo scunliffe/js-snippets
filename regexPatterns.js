@@ -22,6 +22,8 @@ var isValidUSCurrency = /^(\$?)(\d{1,3}(\,\d{3})*|(\d+))(\.\d{2})?$/;
 */
 var isValidPercentage = /^(0*100{1,1}\.?((?<=\.)0*)?%?$)|(^0*\d{0,2}\.?((?<=\.)\d*)?%?)$/;
 
+var isValidHexColor = /^#?([a-f0-9]{6}|[a-f0-9]{3})$/i;
+
 /*
 	Handles distances in various forms of imperial units
 		3'7"
