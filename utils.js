@@ -19,3 +19,8 @@ function extendNamespace(ns, nsStr){
 	}
 	return parent;
 }
+
+//
+function getAsConstant(val){
+	return function(){return val;};
+}
