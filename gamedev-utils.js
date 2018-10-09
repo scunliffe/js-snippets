@@ -15,3 +15,7 @@ function getArrayMin(arr){
 function getArrayMax(arr){
 	return Math.max.apply({}, arr);
 }
+
+function getRandomHexColor() {
+	return '#' + Math.random().toString(16).slice(2, 8);
+}
