@@ -7,3 +7,11 @@ function curb(n, min, max){
 function lerp(min, max, val){
 	return min * (1 - val) + max * val;
 }
+
+function getArrayMin(arr){
+	return Math.min.apply({}, arr);
+}
+
+function getArrayMax(arr){
+	return Math.max.apply({}, arr);
+}
